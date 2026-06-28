@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Inscription des bénévoles</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h2>Inscription des bénévoles</h2>
+
+<form id="benevoleForm">
+
+    <input type="hidden"
+name="formType"
+value="benevole">
+
+<label>Nom</label>
+<input type="text" name="nom" required>
+
+<label>Prénom</label>
+<input type="text" name="prenom" required>
+
+<label>Téléphone</label>
+<input type="tel" name="telephone" required>
+
+<label>Email</label>
+<input type="email" name="email">
+
+<label>Commune</label>
+<input type="text" name="commune">
+
+<label>Quartier</label>
+<input type="text" name="quartier">
+
+<label>Profession</label>
+<input type="text" name="profession">
+
+<label>Compétences</label>
+<textarea name="competences"></textarea>
+
+<label>Disponibilité</label>
+<select name="disponibilite">
+<option>Temps plein</option>
+<option>Week-end</option>
+<option>Selon les besoins</option>
+</select>
+
+<input type="submit" value="S'inscrire">
+
+</form>
+
+
+<script src="script.js"></script>
+</body>
+</html>

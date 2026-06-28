@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Contribution citoyenne</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h2>Contribution citoyenne</h2>
+
+<form id="contributionForm">
+
+    <input type="hidden"
+name="formType"
+value="contribution">
+
+<label>Nom</label>
+<input type="text" name="nom">
+
+<label>Prénom</label>
+<input type="text" name="prenom">
+
+<label>Commune</label>
+<input type="text" name="commune">
+
+<label>Quartier</label>
+<input type="text" name="quartier">
+
+<label>Thème</label>
+
+<select name="theme">
+
+<option>Emploi</option>
+
+<option>Education</option>
+
+<option>Santé</option>
+
+<option>Numérique</option>
+
+<option>Environnement</option>
+
+<option>Jeunesse</option>
+
+<option>Culture</option>
+
+</select>
+
+<label>Votre proposition</label>
+
+<textarea
+name="proposition"
+rows="8"
+required>
+</textarea>
+
+<input type="submit"
+value="Envoyer">
+
+</form>
+
+
+<script src="script.js"></script>
+</body>
+</html>

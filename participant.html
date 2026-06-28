@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inscription des Participants</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>ASSISES DE PIKINE 2030</h1>
+
+<p>Inscription des Participants</p>
+
+</header>
+
+<form id="participantForm">
+
+    <input type="hidden"
+name="formType"
+value="participant">
+
+<label>Nom *</label>
+<input type="text" name="nom" required>
+
+<label>Prénom *</label>
+<input type="text" name="prenom" required>
+
+<label>Sexe *</label>
+
+<select name="sexe" required>
+<option value="">Choisir...</option>
+<option>Masculin</option>
+<option>Féminin</option>
+</select>
+
+<label>Date de naissance</label>
+<input type="date" name="naissance">
+
+<label>Téléphone *</label>
+<input type="tel" name="telephone" required>
+
+<label>Email</label>
+<input type="email" name="email">
+
+<label>Commune *</label>
+<input type="text" name="commune" required>
+
+<label>Quartier</label>
+<input type="text" name="quartier">
+
+<label>Profession</label>
+<input type="text" name="profession">
+
+<label>Organisation / Structure</label>
+<input type="text" name="structure">
+
+<label>Commission souhaitée</label>
+
+<select name="commission">
+
+<option>Éducation</option>
+
+<option>Santé</option>
+
+<option>Jeunesse</option>
+
+<option>Numérique</option>
+
+<option>Emploi</option>
+
+<option>Environnement</option>
+
+<option>Culture</option>
+
+<option>Sport</option>
+
+<option>Gouvernance</option>
+
+</select>
+
+<label>Pourquoi souhaitez-vous participer ?</label>
+
+<textarea
+name="motivation"
+rows="6">
+</textarea>
+
+<input
+type="submit"
+value="S'inscrire">
+
+</form>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
