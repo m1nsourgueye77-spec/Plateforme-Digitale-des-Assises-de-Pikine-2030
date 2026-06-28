@@ -8,13 +8,17 @@
 
 <body>
 
-<h2>Questionnaire citoyen</h2>
+    <header>
+         <h1>ASSISES DE PIKINE 2030</h1>
+         <p>Questionnaire citoyen</p>
+    </header>
+
+
+<p id="statusMsg"></p>
 
 <form id="questionnaireForm">
 
-    <input type="hidden"
-name="formType"
-value="questionnaire">
+<input type="hidden" name="formType" value="questionnaire">
 
 <p>Quelle est votre priorité ?</p>
 
@@ -69,6 +73,8 @@ value="Valider">
 </form>
 
 
-<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="js/script.js"></script>
 </body>
 </html>
