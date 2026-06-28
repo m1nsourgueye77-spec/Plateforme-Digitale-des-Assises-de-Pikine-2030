@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const url = "https://script.google.com/macros/s/AKfycbwcdJSOB-BkoukphJM9tR1AtN9gPNionuu0lttqF4YSDtomjPW16XOBSBFPPrhs42rc/exec"; // 👈 remplace ici par ton lien Apps Script
+  const url = "https://script.google.com/macros/s/AKfycbwcdJSOB-BkoukphJM9tR1AtN9gPNionuu0lttqF4YSDtomjPW16XOBSBFPPrhs42rc/exec";
 
   const forms = document.querySelectorAll("form");
 
@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       let ok = true;
 
-      // 🔴 validation des champs requis
       this.querySelectorAll("[required]").forEach(champ => {
         if (champ.value.trim() == "") {
           champ.style.border = "2px solid red";
@@ -26,31 +25,75 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // ✅ préparation des données
       const formData = new FormData(this);
       let objet = {};
 
       formData.forEach((v, k) => objet[k] = v);
 
-      // 🚀 envoi vers Google Sheets (Apps Script)
       fetch(url, {
-        method: "POST",
-        body: JSON.stringify(objet),
-        headers: {
-          "Content-Type": "application/json"
-        }
-      })
-      .then(r => r.json())
-      .then(rep => {
-        alert(rep.message || "Envoi réussi !");
-        this.reset();
-      })
-      .catch(() => {
-        alert("Erreur d'envoi.");
-      });
+  method: "POST",
+  body: new URLSearchParams(objet)
+})
+.then(r => r.json())
+.then(rep => {
 
+  genererPDF(this);
+
+  alert(rep.message || "Envoi réussi !");
+  this.reset();
+
+})
+.catch(() => {
+  alert("Erreur d'envoi (Apps Script)");
+});
     });
 
   });
 
 });
+
+
+// ================================
+// PDF
+// ================================
+function genererPDF(form) {
+
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF();
+
+    pdf.setFont("helvetica", "bold");
+    pdf.setFontSize(18);
+    pdf.text("ASSISES DE PIKINE 2030", 20, 20);
+
+    pdf.setFontSize(14);
+    pdf.text("Fiche d'inscription", 20, 30);
+
+    pdf.setFont("helvetica", "normal");
+    pdf.setFontSize(11);
+
+    let y = 45;
+
+    const data = new FormData(form);
+
+    data.forEach((value, key) => {
+
+        let text = key + " : " + value;
+
+        // éviter dépassement simple
+        let lines = pdf.splitTextToSize(text, 170);
+
+        pdf.text(lines, 20, y);
+
+        y += lines.length * 7;
+
+        if (y > 270) {
+            pdf.addPage();
+            y = 20;
+        }
+
+    });
+
+    pdf.text("Date : " + new Date().toLocaleString(), 20, y + 10);
+
+    pdf.save("Assises_Pikine_2030.pdf");
+}
