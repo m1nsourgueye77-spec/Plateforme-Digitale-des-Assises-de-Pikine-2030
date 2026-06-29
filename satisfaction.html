@@ -9,11 +9,15 @@
 <body>
 
     <header>
+        <img src="Logo Assises de Pikine 2030.jpeg" alt="Logo Assises de Pikine 2030" class="logo">
+
         <h1>ASSISES DE PIKINE 2030</h1>
 <p>Enquête de satisfaction</p>
 </header>
 
 <form id="satisfactionForm">
+
+    <input type="hidden" name="formType" value="satisfaction">
 
 <label>Nom</label>
 
@@ -66,6 +70,11 @@ rows="6">
 <input
 type="submit"
 value="Envoyer">
+
+<button type="button" onclick="exportPDF('satisfactionForm')">
+Exporter en PDF
+</button>
+
 
 </form>
 
