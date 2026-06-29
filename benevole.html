@@ -9,6 +9,8 @@
 <body>
 
     <header>
+        <img src="Logo Assises de Pikine 2030.jpeg" alt="Logo Assises de Pikine 2030" class="logo">
+
 <h1>ASSISES DE PIKINE 2030</h1>
 <p>Inscription des Bénévoles</p>
 </header>
@@ -54,7 +56,15 @@ value="benevole">
 <option>Selon les besoins</option>
 </select>
 
+
 <input type="submit" value="S'inscrire">
+
+
+<button type="button" onclick="exportPDF('benevoleForm')">
+Exporter en PDF
+</button>
+
+</form>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
