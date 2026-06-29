@@ -1,64 +1,89 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const url = "https://script.google.com/macros/s/AKfycbwcdJSOB-BkoukphJM9tR1AtN9gPNionuu0lttqF4YSDtomjPW16XOBSBFPPrhs42rc/exec";
+    const url = "https://script.google.com/macros/s/AKfycbwcdJSOB-BkoukphJM9tR1AtN9gPNionuu0lttqF4YSDtomjPW16XOBSBFPPrhs42rc/exec";
 
-  const forms = document.querySelectorAll("form");
+    const forms = document.querySelectorAll("form");
 
-  forms.forEach(form => {
+    forms.forEach(form => {
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+        form.addEventListener("submit", function (e) {
 
-      let ok = true;
+            e.preventDefault();
 
-      this.querySelectorAll("[required]").forEach(champ => {
-        if (champ.value.trim() == "") {
-          champ.style.border = "2px solid red";
-          ok = false;
-        } else {
-          champ.style.border = "1px solid #ccc";
-        }
-      });
+            let ok = true;
 
-      if (!ok) {
-        alert("Veuillez remplir tous les champs obligatoires.");
-        return;
-      }
+            this.querySelectorAll("[required]").forEach(champ => {
 
-      const formData = new FormData(this);
-      let objet = {};
+                if (champ.value.trim() === "") {
+                    champ.style.border = "2px solid red";
+                    ok = false;
+                } else {
+                    champ.style.border = "1px solid #ccc";
+                }
 
-      formData.forEach((v, k) => objet[k] = v);
+            });
 
-      fetch(url, {
-  method: "POST",
-  body: new URLSearchParams(objet)
-})
-.then(r => r.json())
-.then(rep => {
+            if (!ok) {
+                alert("Veuillez remplir tous les champs obligatoires.");
+                return;
+            }
 
-  genererPDF(this);
+            const formData = new FormData(this);
+            let objet = {};
 
-  alert(rep.message || "Envoi réussi !");
-  this.reset();
+            formData.forEach((v, k) => objet[k] = v);
 
-})
-.catch(() => {
-  alert("Erreur d'envoi (Apps Script)");
-});
+            fetch(url, {
+                method: "POST",
+                body: new URLSearchParams(objet)
+            })
+            .then(r => r.json())
+            .then(rep => {
+
+                // Génération automatique du PDF après l'envoi
+                genererPDF(this);
+
+                alert(rep.message || "Envoi réussi !");
+                this.reset();
+
+            })
+            .catch(() => {
+
+                alert("Erreur d'envoi (Apps Script)");
+
+            });
+
+        });
+
     });
 
-  });
-
 });
 
 
-// ================================
-// PDF
-// ================================
+// ===============================
+// Bouton Export PDF
+// ===============================
+function exportPDF(formId) {
+
+    const form = document.getElementById(formId);
+
+    if (!form) {
+        alert("Formulaire introuvable.");
+        return;
+    }
+
+    genererPDF(form);
+
+}
+
+
+// ===============================
+// Génération du PDF
+// ===============================
 function genererPDF(form) {
 
     const { jsPDF } = window.jspdf;
+
     const pdf = new jsPDF();
 
     pdf.setFont("helvetica", "bold");
@@ -77,14 +102,13 @@ function genererPDF(form) {
 
     data.forEach((value, key) => {
 
-        let text = key + " : " + value;
+        let texte = key + " : " + value;
 
-        // éviter dépassement simple
-        let lines = pdf.splitTextToSize(text, 170);
+        let lignes = pdf.splitTextToSize(texte, 170);
 
-        pdf.text(lines, 20, y);
+        pdf.text(lignes, 20, y);
 
-        y += lines.length * 7;
+        y += lignes.length * 7;
 
         if (y > 270) {
             pdf.addPage();
@@ -96,4 +120,5 @@ function genererPDF(form) {
     pdf.text("Date : " + new Date().toLocaleString(), 20, y + 10);
 
     pdf.save("Assises_Pikine_2030.pdf");
+
 }
