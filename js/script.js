@@ -29,9 +29,20 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             const formData = new FormData(this);
-            let objet = {};
+           let objet = {};
 
-            formData.forEach((v, k) => objet[k] = v);
+// champs normaux
+formData.forEach((v, k) => objet[k] = v);
+
+// DEFIS (checkbox)
+objet.defis = Array.from(document.querySelectorAll('input[name="defis"]:checked'))
+  .map(el => el.value)
+  .join(", ");
+
+// PRIORITES (checkbox)
+objet.priorites = Array.from(document.querySelectorAll('input[name="priorites"]:checked'))
+  .map(el => el.value)
+  .join(", ");
 
             fetch(url, {
                 method: "POST",
