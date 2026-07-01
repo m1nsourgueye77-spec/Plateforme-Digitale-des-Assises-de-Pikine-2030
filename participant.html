@@ -42,8 +42,21 @@ value="participant">
 <option>Féminin</option>
 </select>
 
-<label>Date de naissance</label>
-<input type="date" name="naissance">
+
+<label>Tranche d'âge *</label>
+
+<select name="age" required>
+
+<option value="">Choisir...</option>
+
+<option value="moins_18">Moins de 18 ans</option>
+
+<option value="18_35">18 à 35 ans</option>
+
+<option value="plus_35">Plus de 35 ans</option>
+
+</select>
+
 
 <label>Téléphone *</label>
 <input type="tel" name="telephone" required>
@@ -67,32 +80,23 @@ value="participant">
 
 <select name="commission">
 
-<option>Éducation</option>
-
-<option>Santé</option>
-
-<option>Jeunesse</option>
-
-<option>Numérique</option>
-
 <option>Emploi</option>
-
+<option>Éducation</option>
+<option>Santé</option>
+<option>Numérique</option>
+<option>Cadre de vie</option>
+<option>Autonomisation des femmes</option>
+<option>Jeunesse</option>
 <option>Environnement</option>
-
 <option>Culture</option>
-
-<option>Sport</option>
-
 <option>Gouvernance</option>
+<option>Autre (à préciser)</option>
 
 </select>
 
-<label>Pourquoi souhaitez-vous participer ?</label>
+<label>Si "Autre", précisez</label>
+<input type="text" name="autre_theme">
 
-<textarea
-name="motivation"
-rows="6">
-</textarea>
 
 <input
 type="submit"
