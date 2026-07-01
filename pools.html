@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Les 4 Pools</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <header>
+        <img src="Logo Assises de Pikine 2030.jpeg" alt="Logo Assises de Pikine 2030" class="logo">
+
+<h1>ASSISES DE PIKINE 2030</h1>
+<p>Choix des Pools</p>
+
+</header>
+<p id="statusMsg"></p>
+
+<form id="poolsForm">
+
+    <input type="hidden" name="formType" value="pools">
+
+
+
+
+
+<label>Choisissez le Pools *</label>
+
+<select name="pools" required>
+
+<option value="">Sélectionner un pool</option>
+
+<option>Scientifique</option>
+
+<option>Logistique et Organisation</option>
+
+<option>Communication</option>
+
+<option>Mobilisation et Partenariat</option>
+
+</select>
+
+</select>
+
+
+<label>Nom</label>
+<input type="text" name="nom" required>
+
+<label>Prénom</label>
+<input type="text" name="prenom" required>
+
+<label>Commune</label>
+<input type="text" name="commune" required>
+
+<label>Quartier</label>
+<input type="text" name="quartier" required>
+
+<label>Profession *</label>
+<input type="text" name="profession" required>
+
+<label>Contact (Téléphone) *</label>
+<input type="tel" name="telephone" required>
+
+
+<label>Email</label>
+<input type="email" name="email">
+
+<label>Structure / Organisation</label>
+<input type="text" name="structure">
+
+<label>Fonction</label>
+<input type="text" name="fonction">
+
+<label>Compétences</label>
+<textarea name="competences" rows="4"></textarea>
+
+<label>Pourquoi souhaitez-vous intégrer ce pool ?</label>
+<textarea name="motivation" rows="5"></textarea>
+
+
+
+<input type="submit"
+value="Envoyer">
+
+<button type="button" onclick="exportPDF('poolsForm')">
+Exporter en PDF
+</button>
+
+</form>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="js/script.js"></script>
+</body>
+</html>
