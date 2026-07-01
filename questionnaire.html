@@ -2,21 +2,18 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Questionnaire citoyen</title>
+<title>Questionnaire citoyen - Assises de Pikine 2030</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header>
-<img src="Logo Assises de Pikine 2030.jpeg" alt="Logo Assises de Pikine 2030" class="logo">
-
-
-
-         <h1>ASSISES DE PIKINE 2030</h1>
-         <p>Questionnaire citoyen</p>
-    </header>
-
+<header>
+  <img src="Logo Assises de Pikine 2030.jpeg" class="logo">
+  <h1>ASSISES DE PIKINE 2030</h1>
+  <p>« Ensemble, construisons le Pikine de demain »</p>
+  <p>Questionnaire citoyen</p>
+</header>
 
 <p id="statusMsg"></p>
 
@@ -24,64 +21,160 @@
 
 <input type="hidden" name="formType" value="questionnaire">
 
-<p>Quelle est votre priorité ?</p>
+<!-- I. PROFIL -->
+<h2>I. PROFIL DU PARTICIPANT</h2>
 
-<input type="radio"
-name="priorite"
-value="Emploi"> Emploi
+<label>Sexe</label><br>
+<input type="radio" name="sexe" value="Homme" required> Homme
+<input type="radio" name="sexe" value="Femme"> Femme
+<br><br>
 
-<br>
+<label>Tranche d'âge</label><br>
+<select name="age" required>
+  <option value="">Choisir</option>
+  <option>Moins de 18 ans</option>
+  <option>18-25 ans</option>
+  <option>26-35 ans</option>
+  <option>36-45 ans</option>
+  <option>46-60 ans</option>
+  <option>Plus de 60 ans</option>
+</select>
+<br><br>
 
-<input type="radio"
-name="priorite"
-value="Santé"> Santé
+<label>Commune de résidence</label>
+<input type="text" name="commune" required>
 
-<br>
+<label>Situation professionnelle</label>
+<input type="text" name="profession" required>
 
-<input type="radio"
-name="priorite"
-value="Education"> Education
+<hr>
 
-<br>
+<!-- II. CADRE DE VIE -->
+<h2>II. ÉVALUATION DU CADRE DE VIE</h2>
+<p>Note de 1 (très mauvais) à 5 (très bon)</p>
 
-<input type="radio"
-name="priorite"
-value="Numérique"> Numérique
+Voirie <input type="number" name="voirie" min="1" max="5"><br>
+Assainissement <input type="number" name="assainissement" min="1" max="5"><br>
+Eau potable <input type="number" name="eau" min="1" max="5"><br>
+Électricité <input type="number" name="electricite" min="1" max="5"><br>
+Sécurité <input type="number" name="securite" min="1" max="5"><br>
+Santé <input type="number" name="sante" min="1" max="5"><br>
+Éducation <input type="number" name="education" min="1" max="5"><br>
+Transport <input type="number" name="transport" min="1" max="5"><br>
+Espaces verts <input type="number" name="espaces_verts" min="1" max="5"><br>
+Propreté <input type="number" name="proprete" min="1" max="5"><br>
 
-<br>
+<hr>
 
-<input type="radio"
-name="priorite"
-value="Environnement"> Environnement
+<!-- III -->
+<h2>III. PRINCIPAUX DÉFIS (choix multiples)</h2>
 
-<br>
+<input type="checkbox" name="defis" value="Chômage"> Chômage<br>
+<input type="checkbox" name="defis" value="Inondations"> Inondations<br>
+<input type="checkbox" name="defis" value="Assainissement"> Assainissement<br>
+<input type="checkbox" name="defis" value="Insécurité"> Insécurité<br>
+<input type="checkbox" name="defis" value="Santé"> Santé<br>
+<input type="checkbox" name="defis" value="Éducation"> Éducation<br>
+<input type="checkbox" name="defis" value="Habitat"> Habitat<br>
+<input type="checkbox" name="defis" value="Mobilité"> Mobilité<br>
+<input type="checkbox" name="defis" value="Déchets"> Gestion des déchets<br>
+<input type="checkbox" name="defis" value="Autre"> Autre<br>
 
-<input type="radio"
-name="priorite"
-value="Sécurité"> Sécurité
+<hr>
+
+<!-- IV -->
+<h2>IV. PRIORITÉS POUR PIKINE 2030</h2>
+
+<input type="checkbox" name="priorites" value="Emploi"> Emploi<br>
+<input type="checkbox" name="priorites" value="Formation"> Formation professionnelle<br>
+<input type="checkbox" name="priorites" value="Santé"> Santé<br>
+<input type="checkbox" name="priorites" value="Éducation"> Éducation<br>
+<input type="checkbox" name="priorites" value="Numérique"> Numérique<br>
+<input type="checkbox" name="priorites" value="Sécurité"> Sécurité<br>
+<input type="checkbox" name="priorites" value="Environnement"> Environnement<br>
+
+<hr>
+
+<!-- V -->
+<h2>V. VILLE INTELLIGENTE</h2>
+
+<label>Smart City ?</label><br>
+<input type="radio" name="smartcity" value="Oui"> Oui
+<input type="radio" name="smartcity" value="Non"> Non
+<input type="radio" name="smartcity" value="Je ne sais pas"> Je ne sais pas
 
 <br><br>
 
-<label>Suggestions</label>
+<label>Services prioritaires</label><br>
+<textarea name="services_numeriques" rows="5"></textarea>
 
-<textarea
-name="suggestions"
-rows="6">
-</textarea>
+<hr>
+
+<!-- VI -->
+<h2>VI. PARTICIPATION CITOYENNE</h2>
+
+<textarea name="participation" rows="4"></textarea>
+
+<hr>
+
+<!-- VII -->
+<h2>VII. DIASPORA</h2>
+
+<label>Membre diaspora ?</label><br>
+<input type="radio" name="diaspora" value="Oui"> Oui
+<input type="radio" name="diaspora" value="Non"> Non
 
 <br><br>
 
-<input type="submit"
-value="Valider">
+<textarea name="contribution_diaspora" rows="4"></textarea>
+
+<hr>
+
+<!-- VIII -->
+<h2>VIII. GOUVERNANCE</h2>
+<textarea name="gouvernance" rows="5"></textarea>
+
+<hr>
+
+<!-- IX -->
+<h2>IX. VISION 2030</h2>
+<textarea name="vision" rows="5"></textarea>
+
+<hr>
+
+<!-- X -->
+<h2>X. PROPOSITIONS</h2>
+Proposition 1<br>
+<textarea name="prop1"></textarea><br>
+
+Proposition 2<br>
+<textarea name="prop2"></textarea><br>
+
+Proposition 3<br>
+<textarea name="prop3"></textarea>
+
+<hr>
+
+<!-- XI -->
+<h2>XI. CONTACT (OPTIONNEL)</h2>
+
+<input type="text" name="nom" placeholder="Nom"><br>
+<input type="tel" name="telephone" placeholder="Téléphone"><br>
+<input type="email" name="email" placeholder="Email"><br>
+<input type="text" name="organisation" placeholder="Organisation">
+
+<br><br>
+
+<input type="submit" value="Envoyer">
 
 <button type="button" onclick="exportPDF('questionnaireForm')">
 Exporter en PDF
 </button>
+
 </form>
 
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
 <script src="js/script.js"></script>
+
 </body>
 </html>
