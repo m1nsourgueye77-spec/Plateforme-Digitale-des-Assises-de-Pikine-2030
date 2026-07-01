@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribution de la Diaspora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+ <header>
+        <img src="Logo Assises de Pikine 2030.jpeg" alt="Logo Assises de Pikine 2030" class="logo">
+
+<h1>ASSISES DE PIKINE 2030</h1>
+<p>Contribution de la Diaspora</p>
+
+</header>
+<p id="statusMsg"></p>
+
+<form id="diasporaForm">
+
+    <input type="hidden" name="formType" value="diaspora">
+
+<label>Nom</label>
+<input type="text" name="nom">
+
+<label>Prénom</label>
+<input type="text" name="prenom">
+
+<label>Pays</label>
+<input type="text" name="pays">
+
+<label>Contacts (Téléphone) *</label>
+<input type="tel" name="telephone" required>
+
+<label>E-mail *</label>
+<input type="tel" name="email" required>
+
+<label>Thème</label>
+
+<select name="theme">
+
+<option>Emploi</option>
+<option>Éducation</option>
+<option>Santé</option>
+<option>Numérique</option>
+<option>Cadre de vie</option>
+<option>Autonomisation des femmes</option>
+<option>Jeunesse</option>
+<option>Environnement</option>
+<option>Culture</option>
+<option>Gouvernance</option>
+<option>Autre (à préciser)</option>
+
+</select>
+
+<label>Si "Autre", précisez</label>
+<input type="text" name="autre_theme">
+
+
+
+<input type="submit"
+value="Envoyer">
+
+<button type="button" onclick="exportPDF('diasporaForm')">
+Exporter en PDF
+</button>
+
+</form>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="js/script.js"></script>
+
+    
+</body>
+</html>
