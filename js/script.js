@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const url = "https://script.google.com/macros/s/AKfycbwRdYJum2_EGJe7G6YGkjxdPRC5P5oc3t5faV8_gJKrRnTOOO2lfdP__wsEY7kOx-AW/exec";
+    const url = "https://script.google.com/macros/s/AKfycbxtRs1soPPenJh8eUWdai_zeB1hdrixO0b1J9p4Ym_3kWyXjQ9-FJ1fWS9JsFUXlkIj/exec";
 
     const forms = document.querySelectorAll("form");
 
