@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Inscription des volontaires</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="Logo Assises de Pikine 2030.jpeg" alt="Logo Assises de Pikine 2030" class="logo">
+
+<h1>ASSISES DE PIKINE 2030</h1>
+<p>Inscription des Volontaires</p>
+</header>
+
+
+
+<p id="statusMsg"></p>
+
+<form id="volontairesForm">
+
+    <input type="hidden"
+name="formType"
+value="volontaires">
+
+<label>Nom</label>
+<input type="text" name="nom" required>
+
+<label>Prénom</label>
+<input type="text" name="prenom" required>
+
+<label>Téléphone</label>
+<input type="tel" name="telephone" required>
+
+<label>Email</label>
+<input type="email" name="email">
+
+<label>Commune</label>
+<input type="text" name="commune">
+
+<label>Quartier</label>
+<input type="text" name="quartier">
+
+<label>Profession</label>
+<input type="text" name="profession">
+
+<label>Compétences</label>
+<textarea name="competences"></textarea>
+
+<label>Disponibilité</label>
+<select name="disponibilite">
+<option>Temps plein</option>
+<option>Week-end</option>
+<option>Selon les besoins</option>
+</select>
+
+
+<input type="submit" value="S'inscrire">
+
+
+<button type="button" onclick="exportPDF('volontairesForm')">
+Exporter en PDF
+</button>
+
+</form>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="js/script.js"></script>
+</body>
+</html>
