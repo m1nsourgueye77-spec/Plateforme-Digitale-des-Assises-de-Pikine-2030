@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact - Assises de Pikine 2030</title>
+<title>Contact - Assises de Pikine </title>
 
 <link rel="stylesheet" href="css/style.css">
 
@@ -24,22 +24,52 @@
 
 </header>
 
-<section>
+<section class="contact-section">
+    <div class="contact-container">
 
-<h2>📍 Coordonnées</h2>
+        <h2>📍 Contactez-nous</h2>
+        <p class="contact-intro">
+            Une question, une suggestion ou une contribution ?
+            L'équipe des <strong>Assises Pikine 2030</strong> reste à votre écoute.
+        </p>
 
-<p><strong>Initiative Pikine 2030</strong></p>
+        <div class="contact-grid">
 
-<p>Préfecture de Pikine</p>
+            <div class="contact-card">
+                <span class="icon">🏛️</span>
+                <h3>Adresse</h3>
+                <p>
+                    <strong>Initiative Pikine 2030</strong><br>
+                    Préfecture de Pikine<br>
+                    Pikine - Sénégal
+                </p>
+            </div>
 
-<p>Pikine - Sénégal</p>
+            <div class="contact-card">
+                <span class="icon">📧</span>
+                <h3>Email</h3>
+                <p>
+                    <a href="mailto:assisespikine2030@gmail.com">
+                        assisespikine2030@gmail.com
+                    </a><br>
+                    <a href="mailto:olarib@yahoo.fr">
+                        olarib@yahoo.fr
+                    </a>
+                </p>
+            </div>
 
-<p>Email : contact@pikine2030.sn</p>
+            <div class="contact-card">
+                <span class="icon">📞</span>
+                <h3>Téléphone</h3>
+                <p>
+                    <a href="tel:+221775054804">+221 77 505 48 04</a><br>
+                    <a href="tel:+221776813749">+221 77 681 37 49</a>
+                </p>
+            </div>
 
-<p>Téléphone : +221 XX XXX XX XX</p>
+        </div>
 
-<p>WhatsApp : +221 XX XXX XX XX</p>
-
+    </div>
 </section>
 
 <section>
@@ -49,32 +79,28 @@
 <form id="contactForm">
 
 <label>Nom *</label>
-
 <input type="text" name="nom" required>
 
 <label>Prénom *</label>
-
 <input type="text" name="prenom" required>
 
 <label>Email *</label>
-
 <input type="email" name="email" required>
 
 <label>Téléphone</label>
-
 <input type="tel" name="telephone">
 
 <label>Objet</label>
-
 <input type="text" name="objet">
 
 <label>Votre message *</label>
-
 <textarea name="message" rows="8" required></textarea>
 
 <input type="hidden" name="formType" value="contact">
 
-<input type="submit" value="Envoyer le message">
+<button type="submit" class="btn-envoyer">
+    📩 Envoyer le message
+</button>
 
 </form>
 
