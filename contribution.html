@@ -2,25 +2,32 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Contribution citoyenne</title>
+
 <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<header>
 
-    <header>
-        <img src="Logo Assises de Pikine 2030.jpeg" alt="Logo Assises de Pikine 2030" class="logo">
+<img src="Logo Assises de Pikine 2030.jpeg"
+alt="Logo Assises de Pikine 2030"
+class="logo">
 
-<h1>ASSISES DE PIKINE</h1>
+<h1>ASSISES DE PIKINE 2030</h1>
+
 <p>Contribution citoyenne</p>
 
 </header>
+
 <p id="statusMsg"></p>
 
 <form id="contributionForm">
 
-    <input type="hidden" name="formType" value="contribution">
+<input type="hidden" name="formType" value="contribution">
 
 <label>Nom</label>
 <input type="text" name="nom">
@@ -40,41 +47,89 @@
 <label>Contact (Téléphone) *</label>
 <input type="tel" name="telephone" required>
 
-<label>Thème</label>
 
-<select name="theme">
+<label>Choisissez un axe stratégique *</label>
 
-<option>Emploi</option>
-<option>Éducation</option>
-<option>Santé</option>
-<option>Numérique</option>
-<option>Cadre de vie</option>
-<option>Autonomisation des femmes</option>
-<option>Jeunesse</option>
-<option>Environnement</option>
-<option>Culture</option>
-<option>Gouvernance</option>
-<option>Autre (à préciser)</option>
+<select
+id="axe"
+name="axe"
+required
+onchange="chargerThemesContribution()">
+
+<option value="">Sélectionner un axe</option>
+
+<option value="1">Axe 1 - Gouvernance territoriale, citoyenneté et coopération</option>
+
+<option value="2">Axe 2 - Développement économique, emploi et entrepreneuriat</option>
+
+<option value="3">Axe 3 - Urbanisme, habitat, infrastructures et mobilité</option>
+
+<option value="4">Axe 4 - Eau, assainissement, environnement et résilience climatique</option>
+
+<option value="5">Axe 5 - Capital humain, santé, éducation et protection sociale</option>
+
+<option value="6">Axe 6 - Jeunesse, femmes, sports et cohésion sociale</option>
+
+<option value="7">Axe 7 - Culture, patrimoine, tourisme et identité territoriale</option>
+
+<option value="8">Axe 8 - Innovation, numérique et ville intelligente</option>
+
+<option value="9">Axe 9 - Sécurité humaine et gestion des risques</option>
+
+<option value="10">Axe 10 - Financement du développement et partenariats</option>
 
 </select>
 
-<label>Si "Autre", précisez</label>
-<input type="text" name="autre_theme">
+
+<br><br>
+
+<h3>Choisissez un ou plusieurs sous-thèmes</h3>
+
+<p>
+Vous pouvez sélectionner plusieurs sous-thèmes correspondant à l'axe choisi.
+</p>
+
+<div id="themesContribution">
+
+Choisissez d'abord un axe stratégique.
+
+</div>
+
+<br>
+
+<label>Autre sous-thème (facultatif)</label>
+<input type="text" name="autre_theme" placeholder="Si votre idée n'est pas listée">
+
+<br><br>
+
+<label>Vos attentes ou motivations</label>
+
+<textarea
+name="motivation"
+rows="6"
+placeholder="Décrivez vos attentes vis-à-vis des Assises..."></textarea>
+
+<br><br>
 
 
 
-<input type="submit"
+<input
+type="submit"
 value="Envoyer">
 
-<button type="button" onclick="exportPDF('contributionForm')">
+<button
+type="button"
+onclick="exportPDF('contributionForm')">
+
 Exporter en PDF
+
 </button>
 
 </form>
 
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <script src="js/script.js"></script>
+
 </body>
 </html>
