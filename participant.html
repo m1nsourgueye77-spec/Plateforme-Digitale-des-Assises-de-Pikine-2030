@@ -14,13 +14,15 @@
 <img src="Logo Assises de Pikine 2030.jpeg" alt="Logo Assises de Pikine 2030" class="logo">
 
 
-<h1>ASSISES DE PIKINE</h1>
+<h1>ASSISES DE PIKINE 2030</h1>
 
 <p>Inscription des Participants</p>
+
 
 </header>
 
 <p id="statusMsg"></p>
+
 
 <form id="participantForm">
 
@@ -35,28 +37,19 @@ value="participant">
 <input type="text" name="prenom" required>
 
 <label>Sexe *</label>
-
 <select name="sexe" required>
-<option value="">Choisir...</option>
-<option>Masculin</option>
-<option>Féminin</option>
+    <option value="">Choisir...</option>
+    <option>Masculin</option>
+    <option>Féminin</option>
 </select>
-
 
 <label>Tranche d'âge *</label>
-
 <select name="age" required>
-
-<option value="">Choisir...</option>
-
-<option value="moins_18">Moins de 18 ans</option>
-
-<option value="18_35">18 à 35 ans</option>
-
-<option value="plus_35">Plus de 35 ans</option>
-
+    <option value="">Choisir...</option>
+    <option>Moins de 18 ans</option>
+    <option>18 à 35 ans</option>
+    <option>Plus de 35 ans</option>
 </select>
-
 
 <label>Téléphone *</label>
 <input type="tel" name="telephone" required>
@@ -76,35 +69,83 @@ value="participant">
 <label>Organisation / Structure</label>
 <input type="text" name="structure">
 
-<label>Commission souhaitée</label>
+<hr>
 
-<select name="commission">
+<h3>Participation aux Assises</h3>
 
-<option>Emploi</option>
-<option>Éducation</option>
-<option>Santé</option>
-<option>Numérique</option>
-<option>Cadre de vie</option>
-<option>Autonomisation des femmes</option>
-<option>Jeunesse</option>
-<option>Environnement</option>
-<option>Culture</option>
-<option>Gouvernance</option>
-<option>Autre (à préciser)</option>
+<label>Choisissez un axe stratégique *</label>
+
+<select
+id="axeParticipant"
+name="axe"
+required
+onchange="chargerThemesParticipant()">
+
+<option value="">Sélectionner un axe</option>
+
+<option value="1">Axe 1 - Gouvernance territoriale, citoyenneté et coopération</option>
+
+<option value="2">Axe 2 - Développement économique, emploi et entrepreneuriat</option>
+
+<option value="3">Axe 3 - Urbanisme, habitat, infrastructures et mobilité</option>
+
+<option value="4">Axe 4 - Eau, assainissement, environnement et résilience climatique</option>
+
+<option value="5">Axe 5 - Capital humain, santé, éducation et protection sociale</option>
+
+<option value="6">Axe 6 - Jeunesse, femmes, sports et cohésion sociale</option>
+
+<option value="7">Axe 7 - Culture, patrimoine, tourisme et identité territoriale</option>
+
+<option value="8">Axe 8 - Innovation, numérique et ville intelligente</option>
+
+<option value="9">Axe 9 - Sécurité humaine et gestion des risques</option>
+
+<option value="10">Axe 10 - Financement du développement et partenariats</option>
 
 </select>
 
-<label>Si "Autre", précisez</label>
-<input type="text" name="autre_theme">
+<br><br>
 
+<h3>Choisissez un ou plusieurs sous-thèmes</h3>
+
+<p>
+Vous pouvez sélectionner plusieurs sous-thèmes correspondant à l'axe choisi.
+</p>
+
+<div id="themesParticipant">
+
+Choisissez d'abord un axe stratégique.
+
+</div>
+
+<br>
+
+<label>Autre sous-thème (facultatif)</label>
+<input type="text" name="autre_theme" placeholder="Si votre idée n'est pas listée">
+
+<br><br>
+
+<label>Vos attentes ou motivations</label>
+
+<textarea
+name="motivation"
+rows="6"
+placeholder="Décrivez vos attentes vis-à-vis des Assises..."></textarea>
+
+<br><br>
 
 <input
 type="submit"
 value="S'inscrire">
 
-<button type="button" onclick="exportPDF('participantForm')">
+<button
+type="button"
+onclick="exportPDF('participantForm')">
+
 Exporter en PDF
-</button>>
+
+</button>
 
 </form>
 
