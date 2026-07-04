@@ -549,3 +549,19 @@ function afficherThemes(axe, zone, nomChamp) {
     zone.innerHTML = html;
 
 }
+
+
+
+
+function updateDateTime() {
+  const now = new Date();
+
+  const date = now.toLocaleDateString("fr-FR");
+  const time = now.toLocaleTimeString("fr-FR");
+
+  document.getElementById("date").textContent = "📅 " + date;
+  document.getElementById("time").textContent = "⏱️ " + time;
+}
+
+setInterval(updateDateTime, 1000);
+updateDateTime();
