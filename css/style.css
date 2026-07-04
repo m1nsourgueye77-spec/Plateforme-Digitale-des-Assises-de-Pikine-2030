@@ -322,3 +322,19 @@ width:95%;
 .attente{
     opacity:.9;
 }
+
+
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0d1b2a;
+    color: white;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+footer strong {
+    font-size: 16px;
+}
