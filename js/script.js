@@ -93,7 +93,7 @@ this.querySelectorAll('input[name="priorites"]:checked')
 
 objet.themes=Array.from(
 
-this.querySelectorAll('input[name="themes"]:checked')
+this.querySelectorAll('input[name="themesContribution"]:checked')
 
 )
 
