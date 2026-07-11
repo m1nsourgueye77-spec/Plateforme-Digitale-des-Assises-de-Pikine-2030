@@ -5,6 +5,11 @@
 //==================================================
 
 document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", function(){
+
+    console.log("Page lancement Assises Pikine 2030 chargée");
+
+});
 
 const url="https://script.google.com/macros/s/AKfycbxttuUCoYQXfBX9cq6yaMXSqvLIyy-Bzra4QaVoNConna229BhxepsK-pPcrHS2lJtm/exec";
 
