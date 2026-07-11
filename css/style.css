@@ -377,3 +377,118 @@ footer strong {
     border-radius:12px;
     box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
+
+
+
+
+
+
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f5f7fa;
+    color:#333;
+}
+
+
+header {
+    text-align:center;
+    background:#006233;
+    color:white;
+    padding:30px;
+}
+
+
+.logo {
+    width:120px;
+    border-radius:10px;
+}
+
+
+h1 {
+    margin:10px;
+}
+
+
+.hero {
+
+    text-align:center;
+    padding:50px 20px;
+
+}
+
+
+.hero h2 {
+    color:#006233;
+}
+
+
+.hero p {
+    max-width:800px;
+    margin:auto;
+    line-height:1.7;
+}
+
+
+.btn {
+
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 25px;
+
+    background:#fbc02d;
+    color:#000;
+
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+
+}
+
+
+.btn:hover {
+
+    background:#e0a800;
+
+}
+
+
+.documents {
+
+    padding:30px;
+    text-align:center;
+
+}
+
+
+.card {
+
+    background:white;
+    max-width:400px;
+    margin:auto;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    box-shadow:0 3px 10px #ccc;
+
+}
+
+
+.card a {
+
+    color:#006233;
+    font-weight:bold;
+
+}
+
+
+footer {
+
+    text-align:center;
+    background:#222;
+    color:white;
+    padding:15px;
+
+}
