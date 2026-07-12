@@ -346,6 +346,8 @@ function genererPDF(form){
 
     }
 
+    pdf.text("#AssisesPikine2030", 20, y + 20);
+
     pdf.save(nom+"_"+Date.now()+".pdf");
 
 }
