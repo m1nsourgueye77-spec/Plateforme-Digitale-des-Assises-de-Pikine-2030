@@ -492,3 +492,81 @@ footer {
     padding:15px;
 
 }
+
+
+
+
+/* ===== Appel à inscription ===== */
+
+.appel-inscription{
+
+background:linear-gradient(135deg,#006400,#0b8d2d);
+color:white;
+text-align:center;
+padding:45px 25px;
+margin:30px auto;
+border-radius:12px;
+width:90%;
+max-width:1100px;
+
+}
+
+.appel-inscription h2{
+
+font-size:32px;
+margin-bottom:20px;
+
+}
+
+.appel-inscription p{
+
+font-size:18px;
+line-height:1.7;
+margin-bottom:30px;
+
+}
+
+.appel-boutons{
+
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+
+}
+
+.btn-inscription{
+
+background:#ffc107;
+color:#000;
+padding:15px 30px;
+border-radius:8px;
+font-weight:bold;
+text-decoration:none;
+font-size:18px;
+
+}
+
+.btn-inscription:hover{
+
+background:#ffca2c;
+
+}
+
+.btn-secondaire{
+
+background:white;
+color:#006400;
+padding:15px 30px;
+border-radius:8px;
+font-weight:bold;
+text-decoration:none;
+font-size:18px;
+
+}
+
+.btn-secondaire:hover{
+
+background:#f2f2f2;
+
+}
