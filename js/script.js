@@ -411,120 +411,55 @@ function afficherThemes(axe, zone, nomChamp) {
     const themes = {
 
         "1": [
-            "Gouvernance territoriale",
-            "Décentralisation",
-            "Participation citoyenne",
-            "Digitalisation de l'administration",
-            "Transparence",
-            "Coopération décentralisée",
-            "Intercommunalité",
-            "Diaspora",
-            "Suivi-évaluation"
+            "Croissance démographique, Planification, aménagement du territoire et cadre de vie ",
+            "Urbanisation, habitat et occupation de l'espace",
+            "Foncier et sécurisation des terres",
+            "Gestion du patrimoine bâti"
+        
         ],
 
         "2": [
-            "PME",
-            "Commerce",
-            "Industrie",
-            "Artisanat",
-            "Économie numérique",
-            "Économie sociale et solidaire",
-            "Économie bleue",
-            "Entrepreneuriat",
-            "Formation professionnelle",
-            "Emploi des jeunes",
-            "Investissements"
-        ],
+            "Eau, assainissement et hygiène",
+            "Mobilité et infrastructures",
+            "Services sociaux de base (Energie et accès à l’électricité ; Santé ; Education ; Formation professionnelle ; Culture, sport et loisirs)  ",
+            "Gestion des déchets et salubrité"
+            
+            ],
 
         "3": [
-            "Urbanisme",
-            "Habitat",
-            "Voirie",
-            "Transport",
-            "Mobilité",
-            "Éclairage public",
-            "Espaces publics",
-            "Patrimoine bâti",
-            "Smart City"
+            "Emploi et insertion économique",
+            "Infrastructures et Développement des activités économiques",
+            "Agriculture, élevage et pêche",
+            "Commerce, Artisanat, et Financement et entrepreneuriat"
+            
         ],
 
         "4": [
-            "Eau potable",
-            "Assainissement",
-            "Déchets",
-            "Inondations",
-            "Changements climatiques",
-            "Pollution",
-            "Biodiversité",
-            "Reboisement",
-            "Économie circulaire"
+            "Gouvernance locale et participation citoyenne",
+            "Jeunesse, femmes et inclusion sociale",
+            "Vie communautaire et cohésion sociale",
+            "Sécurité et prévention des conflits",
+            "Communication institutionnelle et recevabilité publique"
+            
         ],
 
         "5": [
-            "Santé",
-            "Éducation",
-            "Formation",
-            "Nutrition",
-            "Protection sociale",
-            "Famille",
-            "Petite enfance",
-            "Handicap",
-            "Personnes âgées"
+            "Inondations et changement climatique",
+            "Protection de l'environnement",
+            "Santé environnementale et cadre de vie",
+            "Résilience et gestion des catastrophes",
+            "Education environnementale et mobilisation communautaire "
+        
         ],
 
         "6": [
-            "Jeunesse",
-            "Leadership",
-            "Autonomisation des femmes",
-            "Sports",
-            "Loisirs",
-            "Citoyenneté",
-            "Prévention de la violence",
-            "Inclusion"
-        ],
-
-        "7": [
-            "Culture",
-            "Patrimoine",
-            "Artisanat",
-            "Industries créatives",
-            "Tourisme",
-            "Événementiel",
-            "Mémoire de Pikine"
-        ],
-
-        "8": [
-            "Numérique",
-            "Intelligence artificielle",
-            "Données territoriales",
-            "Open Data",
-            "Wi-Fi public",
-            "Services numériques",
-            "Administration numérique",
-            "Sécurité intelligente",
-            "Innovation"
-        ],
-
-        "9": [
-            "Sécurité",
-            "Protection civile",
-            "Gestion des catastrophes",
-            "Incendies",
-            "Inondations",
-            "Santé publique",
-            "Prévention"
-        ],
-
-        "10": [
-            "Budget",
-            "Fiscalité locale",
-            "PPP",
-            "RSE",
-            "Coopération",
-            "Diaspora",
-            "Financements innovants",
-            "Fonds verts",
-            "Investissements"
+            "Transition numérique (administration numérique et services publics digitaux)",
+            "Ville intelligente (Smart City) et gouvernance des données",
+            "Innovation, recherche et développement",
+            "Entrepreneuriat numérique et économie digitale",
+            "Connectivité et inclusion numérique",
+            "Marketing territorial, investissements et coopération décentralisée"
+            
         ]
 
     };
