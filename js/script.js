@@ -394,7 +394,7 @@ function chargerThemesDiaspora() {
 // Contribution
 function chargerThemesContribution() {
 
-    const axe = document.getElementById("axe").value;
+    const axe = document.getElementById("axeContribution").value;
     const zone = document.getElementById("themesContribution");
 
     afficherThemes(axe, zone, "themesContribution");
