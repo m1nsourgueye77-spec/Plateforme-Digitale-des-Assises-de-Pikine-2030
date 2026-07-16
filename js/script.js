@@ -4,8 +4,9 @@
 // Partie 1 : Validation + Envoi Google Sheets
 //==================================================
 
+document.addEventListener("DOMContentLoaded", () => {
     
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function(){
 
     console.log("Page lancement Assises Pikine 2030 chargée");
 
@@ -136,8 +137,11 @@ status.innerHTML="⏳ Envoi en cours...";
 //==========================
 
 fetch(url,{
+
 method:"POST",
-body:formData
+
+body:new URLSearchParams(objet)
+
 })
 
 .then(response=>response.json())
@@ -352,6 +356,16 @@ function genererPDF(form){
 // ==========================================
 // CHARGEMENT DYNAMIQUE DES SOUS-THÈMES
 // ==========================================
+
+// Contribution citoyenne
+function chargerThemes() {
+
+    const axe = document.getElementById("axe").value;
+    const zone = document.getElementById("themesContainer");
+
+    afficherThemes(axe, zone, "themes");
+
+}
 
 
 // Participant
