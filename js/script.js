@@ -137,11 +137,8 @@ status.innerHTML="⏳ Envoi en cours...";
 //==========================
 
 fetch(url,{
-
 method:"POST",
-
-body:new URLSearchParams(objet)
-
+body:formData
 })
 
 .then(response=>response.json())
