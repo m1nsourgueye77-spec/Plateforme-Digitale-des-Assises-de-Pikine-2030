@@ -390,13 +390,13 @@ function chargerThemesDiaspora() {
 }
 
 
-// Pole
-function chargerThemesPole() {
+// Contribution
+function chargerThemesContribution() {
 
-    const axe = document.getElementById("axePole").value;
-    const zone = document.getElementById("themesPole");
+    const axe = document.getElementById("axe").value;
+    const zone = document.getElementById("themesContribution");
 
-    afficherThemes(axe, zone, "themesPole");
+    afficherThemes(axe, zone, "themesContribution");
 
 }
 
