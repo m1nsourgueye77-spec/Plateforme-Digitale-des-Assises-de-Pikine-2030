@@ -357,15 +357,7 @@ function genererPDF(form){
 // CHARGEMENT DYNAMIQUE DES SOUS-THÈMES
 // ==========================================
 
-// Contribution citoyenne
-function chargerThemes() {
 
-    const axe = document.getElementById("axe").value;
-    const zone = document.getElementById("themesContainer");
-
-    afficherThemes(axe, zone, "themes");
-
-}
 
 
 // Participant
@@ -390,10 +382,10 @@ function chargerThemesDiaspora() {
 }
 
 
-// Contribution
+// Contributions
 function chargerThemesContribution() {
 
-    const axe = document.getElementById("axe").value;
+    const axe = document.getElementById("axeContribution").value;
     const zone = document.getElementById("themesContribution");
 
     afficherThemes(axe, zone, "themesContribution");
