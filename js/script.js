@@ -1,10 +1,11 @@
-//==================================================
+220//  ==================================================
 // ASSISES DE PIKINE 2030
 // script.js
 // Partie 1 : Validation + Envoi Google Sheets
 //==================================================
 
 document.addEventListener("DOMContentLoaded", () => {
+    
     document.addEventListener("DOMContentLoaded", function(){
 
     console.log("Page lancement Assises Pikine 2030 chargée");
@@ -98,7 +99,7 @@ this.querySelectorAll('input[name="priorites"]:checked')
 
 objet.themes=Array.from(
 
-this.querySelectorAll('input[name="themesContribution"]:checked')
+this.querySelectorAll('input[name="themes"]:checked')
 
 )
 
@@ -346,8 +347,6 @@ function genererPDF(form){
 
     }
 
-    pdf.text("#AssisesPikine2030", 20, y + 20);
-
     pdf.save(nom+"_"+Date.now()+".pdf");
 
 }
@@ -357,6 +356,16 @@ function genererPDF(form){
 // ==========================================
 // CHARGEMENT DYNAMIQUE DES SOUS-THÈMES
 // ==========================================
+
+// Contribution citoyenne
+function chargerThemes() {
+
+    const axe = document.getElementById("axe").value;
+    const zone = document.getElementById("themesContainer");
+
+    afficherThemes(axe, zone, "themes");
+
+}
 
 
 // Participant
@@ -382,10 +391,10 @@ function chargerThemesDiaspora() {
 
 
 // Contribution
-function chargerThemes() {
+function chargerThemesContribution() {
 
     const axe = document.getElementById("axe").value;
-    const zone = document.getElementById("themesContainer");
+    const zone = document.getElementById("themesContribution");
 
     afficherThemes(axe, zone, "themesContribution");
 
@@ -502,7 +511,9 @@ updateDateTime();
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
+
+
+     document.addEventListener("DOMContentLoaded", function () {
 
     const targetDate = new Date("July 17, 2026 09:00:00").getTime();
 
