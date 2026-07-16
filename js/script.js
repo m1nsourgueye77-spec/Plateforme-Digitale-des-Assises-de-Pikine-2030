@@ -357,7 +357,15 @@ function genererPDF(form){
 // CHARGEMENT DYNAMIQUE DES SOUS-THÈMES
 // ==========================================
 
+// Contribution citoyenne
+function chargerThemes() {
 
+    const axe = document.getElementById("axe").value;
+    const zone = document.getElementById("themesContainer");
+
+    afficherThemes(axe, zone, "themes");
+
+}
 
 
 // Participant
@@ -396,7 +404,7 @@ function chargerThemesContribution() {
 // Pole
 function chargerThemesPole() {
 
-    const axe = document.getElementById("axe").value;
+    const axe = document.getElementById("axePole").value;
     const zone = document.getElementById("themesPole");
 
     afficherThemes(axe, zone, "themesPole");
