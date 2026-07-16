@@ -401,6 +401,17 @@ function chargerThemesContribution() {
 }
 
 
+// Pole
+function chargerThemesPole() {
+
+    const axe = document.getElementById("axe").value;
+    const zone = document.getElementById("themesPole");
+
+    afficherThemes(axe, zone, "themesPole");
+
+}
+
+
 // ==========================================
 // FONCTION COMMUNE
 // ==========================================
