@@ -515,7 +515,7 @@ updateDateTime();
 
      document.addEventListener("DOMContentLoaded", function () {
 
-    const targetDate = new Date("July 17, 2026 09:00:00").getTime();
+    const targetDate = new Date("September 25, 2026 08:00:00").getTime();
 
     const timer = setInterval(function () {
 
